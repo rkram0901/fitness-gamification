@@ -5,15 +5,17 @@ import { Fragment } from "react";
 class Timer extends React.Component {
   constructor() {
     super();
-    this.state = { time: "00:10:05", endGame: false };
+    this.state = { time: "00:1:05", endGame: false };
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
-    this.navigateToHome = this.navigateToHome.bind(this)
+    this.navigateToHome = this.navigateToHome.bind(this);
   }
 
-  navigateToHome(){
-      this.setState({endGame: false}, ()=>{this.props.navigateToHome()})
+  navigateToHome() {
+    this.setState({ endGame: false }, () => {
+      this.props.navigateToHome();
+    });
   }
 
   convertToSeconds(time) {
@@ -77,7 +79,15 @@ class Timer extends React.Component {
         {
           <Dialog open={this.state.endGame}>
             <DialogTitle>Time's Up!</DialogTitle>
-            <DialogActions><Button onClick={()=>{this.navigateToHome()}}>Ok</Button></DialogActions>
+            <DialogActions>
+              <Button
+                onClick={() => {
+                  this.navigateToHome();
+                }}
+              >
+                Ok
+              </Button>
+            </DialogActions>
           </Dialog>
         }
       </Fragment>
