@@ -18,7 +18,7 @@ class GameScreen extends React.Component {
         <Timer navigateToHome={this.props.navigateToHome} />
         <Grid>
           <Iframe
-            url="http://cvs-hackathon-hex-tetris.s3-website-us-east-1.amazonaws.com/"
+            url="https://main.dzr2qnbu9dvmr.amplifyapp.com/"
             width="800"
             height="450"
             id=""
