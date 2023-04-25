@@ -6,11 +6,9 @@ class Header extends React.Component {
   render() {
     return (
       <Grid container className="heading">
-        <Grid item xs={3}></Grid>
-        <Grid item xs={6} style={{ padding: "10px" }}>
-          {"Convert Your Fitness to Play time"}{" "}
+        <Grid item xs={12} style={{ padding: "10px" }}>
+          {"Gamification of fitness"}{" "}
         </Grid>
-        <Grid item xs={3}></Grid>
       </Grid>
     );
   }

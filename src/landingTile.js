@@ -23,8 +23,8 @@ class LandingTile extends React.Component {
   }
 
   async navigateToHome(userName) {
-    let userId = _.filter(Constants.user, {name: userName})[0].id
-    await axios.post(Constants.router.baseUrl + "/steps/reset/"+userId)
+    let userId = _.filter(Constants.user, { name: userName })[0].id;
+    await axios.post(Constants.router.baseUrl + "/steps/reset/" + userId);
     this.setState({ isGameLanding: false });
   }
 
@@ -67,9 +67,7 @@ class LandingTile extends React.Component {
 
   componentDidMount() {
     this.getStepDetails();
-    this.timerId = setInterval(() =>
-      this.getStepDetails(), 10000
-    );
+    this.timerId = setInterval(() => this.getStepDetails(), 10000);
   }
 
   componentWillUnmount() {
@@ -96,16 +94,7 @@ class LandingTile extends React.Component {
           <Grid container>
             <Grid container>
               <Grid item xs={3}></Grid>
-              <Grid item xs={6} style={{ padding: "10px" }}>
-                <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
-                  Gamification of fitness
-                </Typography>
-              </Grid>
-              <Grid item xs={3}></Grid>
-            </Grid>
-            <Grid container>
-              <Grid item xs={3}></Grid>
-              <Grid item xs={6} style={{ padding: "10px" }}>
+              <Grid item xs={6} className="cardstyle border-left-primary-blue">
                 <div
                   onClick={() => {
                     this.handleNameClick(
@@ -113,33 +102,38 @@ class LandingTile extends React.Component {
                       "Filkins, Kathleen R"
                     );
                   }}
-                  style={{
-                    width: "100%",
-                    height: "150px",
-                    borderLeft: "4px solid rgb(78, 115, 223)",
-                    boxShadow:
-                      "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
-                  }}
                 >
-                  <Typography
-                    style={{ color: "rgb(78, 115, 223)", fontSize: "30px" }}
-                  >
-                    Filkins, Kathleen R
-                  </Typography>
-                  <div>
-                    {this.state.stepDetails &&
-                    this.state.stepDetails[0] &&
-                    this.state.stepDetails[0].stepsCount
-                      ? this.state.stepDetails[0].stepsCount
-                      : 0}
-                  </div>
+                  <Grid container spacing={{ xs: 2, md: 3 }}>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i className="fa fa-duotone fa-user  fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography className="cardnameheading colorblue">
+                        Filkins, Kathleen R
+                      </Typography>
+                      <div>
+                        {this.state.stepDetails &&
+                        this.state.stepDetails[0] &&
+                        this.state.stepDetails[0].stepsCount
+                          ? this.state.stepDetails[0].stepsCount
+                          : 0}
+                      </div>
+                    </Grid>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i class="fa fa-solid fa-flash fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
               <Grid item xs={3}></Grid>
             </Grid>
             <Grid container>
               <Grid item xs={3}></Grid>
-              <Grid item xs={6} style={{ padding: "10px" }}>
+              <Grid item xs={6} className="cardstyle border-left-success-green">
                 <div
                   onClick={() => {
                     this.handleNameClick(
@@ -147,31 +141,38 @@ class LandingTile extends React.Component {
                       "Briggs, Leah"
                     );
                   }}
-                  style={{
-                    width: "100%",
-                    height: "150px",
-                    borderLeft: "4px solid #1cc88a",
-                    boxShadow:
-                      "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
-                  }}
                 >
-                  <Typography style={{ color: "#1cc88a", fontSize: "30px" }}>
-                    Briggs, Leah
-                  </Typography>
-                  <div>
-                    {this.state.stepDetails &&
-                    this.state.stepDetails[1] &&
-                    this.state.stepDetails[1].stepsCount
-                      ? this.state.stepDetails[1].stepsCount
-                      : 0}
-                  </div>
+                  <Grid container spacing={{ xs: 2, md: 3 }}>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i className="fa fa-duotone fa-user  fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography className="cardnameheading colorsuccess">
+                        Briggs, Leah
+                      </Typography>
+                      <div>
+                        {this.state.stepDetails &&
+                        this.state.stepDetails[1] &&
+                        this.state.stepDetails[1].stepsCount
+                          ? this.state.stepDetails[1].stepsCount
+                          : 0}
+                      </div>
+                    </Grid>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i class="fa fa-solid fa-flash fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
               <Grid item xs={3}></Grid>
             </Grid>
             <Grid container>
               <Grid item xs={3}></Grid>
-              <Grid item xs={6} style={{ padding: "10px" }}>
+              <Grid item xs={6} className="cardstyle border-left-info">
                 <div
                   onClick={() => {
                     this.handleNameClick(
@@ -179,24 +180,31 @@ class LandingTile extends React.Component {
                       "Powell, Ed"
                     );
                   }}
-                  style={{
-                    width: "100%",
-                    height: "150px",
-                    borderLeft: "4px solid #36b9cc",
-                    boxShadow:
-                      "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
-                  }}
                 >
-                  <Typography style={{ color: "#36b9cc", fontSize: "30px" }}>
-                    Powell, Ed
-                  </Typography>
-                  <div>
-                    {this.state.stepDetails &&
-                    this.state.stepDetails[2] &&
-                    this.state.stepDetails[2].stepsCount
-                      ? this.state.stepDetails[2].stepsCount
-                      : 0}
-                  </div>
+                  <Grid container spacing={{ xs: 2, md: 3 }}>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i className="fa fa-duotone fa-user  fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography className="cardnameheading colorinfo">
+                        Powell, Ed
+                      </Typography>
+                      <div>
+                        {this.state.stepDetails &&
+                        this.state.stepDetails[2] &&
+                        this.state.stepDetails[2].stepsCount
+                          ? this.state.stepDetails[2].stepsCount
+                          : 0}
+                      </div>
+                    </Grid>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i class="fa fa-solid fa-flash fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
               <Grid item xs={3}></Grid>

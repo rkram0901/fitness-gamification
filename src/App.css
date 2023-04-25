@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+   font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .App-logo {
@@ -13,8 +21,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App-header {  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,16 +36,18 @@
 }
 
 
-.heading {
-  text-align: left;
+.heading {  
   /* font: normal normal 600 22px/22px Open Sans; */
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'CVS Health Sans, Open Sans';
-  letter-spacing: 0px;  
-  background-color: #712D90 !important;
-  color: #FFFFFF !important;
+  letter-spacing: 0px;    
+  color: #5a5c69!important;
   opacity: 1;
   padding: 1vh 2vh;
+}
+
+.text-gray-300 {
+    color: #dddfeb!important;
 }
 
 .card {
@@ -61,6 +70,77 @@
   opacity: 1;
   padding: 1vh 2vh;
 }
+
+.cardnameheading{
+  text-transform: uppercase!important;
+  font-weight: 700!important;  
+  font-size: 1.75rem;
+}
+
+.colorblue{
+  color: #4e73df!important;
+}
+
+.colorsuccess{
+  color: #1cc88a!important;
+}
+
+.colorinfo{
+  color: #36b9cc!important;
+}
+
+.content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.cardstepsheading{
+  color: #5a5c69!important;
+  font-weight: 700!important;
+  margin-right: 1rem!important;
+  margin-bottom: 0!important;
+  font-size: 2rem;
+}
+
+.cardstyle{
+      position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e3e6f0;
+    border-radius: 0.35rem;    
+    box-sizing: border-box;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+    padding-bottom: 3rem!important;
+    margin-bottom: 1.5rem!important;    
+    padding-top: 3rem!important;
+}
+
+.border-left-primary-blue {
+    border-left: 0.25rem solid #4e73df!important;
+}
+
+.border-left-success-green {
+    border-left: 0.25rem solid #1cc88a!important;
+}
+.border-left-info {
+    border-left: 0.25rem solid #36b9cc!important;
+}
+/*
+ style={{
+                    width: "100%",
+                    height: "100px",
+                    borderLeft: "4px solid rgb(78, 115, 223)",
+                    boxShadow:
+                      "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
+                  }}
+*/
+
+
 
 .progress-bar {
   display: flex;
