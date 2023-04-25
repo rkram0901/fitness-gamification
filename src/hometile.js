@@ -22,7 +22,15 @@ class HomeTile extends React.Component {
     return (
       <Fragment>
         <Grid container>
-          <Grid item xs={4}></Grid>
+          <Grid item xs={3}></Grid>
+          <Grid item xs={6} style={{ padding: "10px" }}>
+            <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
+              Get Fit to Play Game as you wish
+            </Typography>
+          </Grid>
+          <Grid item xs={3}></Grid>
+        </Grid>
+        <Grid container>
           <Grid item xs={4} style={{ padding: "10px" }}>
             <Card className="card">
               <CardContent>
@@ -31,34 +39,46 @@ class HomeTile extends React.Component {
                   variant="headline"
                   component="h2"
                   className="cardheading"
+                  style={{ color: "#4e73df" }}
                 >
-                  Game1
+                  HEXTRIS
                 </Typography>
                 <img src={directions_walk} style={{ width: "40px" }} />
-                <Typography component="p">
-                  Based on your fitness tracking measures you will get some time to play!
-                </Typography>
+                {this.props.gameTimingDetails && (
+                  <div>
+                    <Typography component="p">
+                      Steps:{" "}
+                      {this.props.gameTimingDetails.steps
+                        ? this.props.gameTimingDetails.steps
+                        : 0}
+                    </Typography>
+                    <Typography component="p">
+                      Timing: {this.props.gameTimingDetails.gameOneTime}
+                    </Typography>
+                  </div>
+                )}
               </CardContent>
               <CardActions>
-                <Button
-                  style={{
-                    color: "#FFFFFF",
-                    backgroundColor: "#027E69",
-                    textTransform: "none",
-                  }}
-                  onClick={() => {
-                    this.props.openPlayScreen();
-                  }}
-                >
-                  Play
-                </Button>
+                {this.props.gameTimingDetails.steps > 0 && (
+                  <Button
+                    style={{
+                      color: "#FFFFFF",
+                      backgroundColor: "#4e73df",
+                      textTransform: "none",
+                    }}
+                    onClick={() => {
+                      this.props.openPlayScreen(
+                        this.props.gameTimingDetails.gameOneTime
+                      );
+                    }}
+                  >
+                    Play
+                  </Button>
+                )}
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={4}></Grid>
-        </Grid>
-        <Grid container>
-          <Grid item xs={4}></Grid>
+
           <Grid item xs={4} style={{ padding: "10px" }}>
             <Card className="card">
               <CardContent>
@@ -67,34 +87,46 @@ class HomeTile extends React.Component {
                   variant="headline"
                   component="h2"
                   className="cardheading"
+                  style={{ color: "#1cc88a" }}
                 >
-                  Game2
+                  GOBLIN SLAYER
                 </Typography>
                 <img src={fitness_center} style={{ width: "40px" }} />
-                <Typography component="p">
-                Based on your fitness tracking measures you will get some time to play!
-                </Typography>
+                {this.props.gameTimingDetails && (
+                  <div>
+                    <Typography component="p">
+                      Steps:{" "}
+                      {this.props.gameTimingDetails.steps
+                        ? this.props.gameTimingDetails.steps
+                        : 0}
+                    </Typography>
+                    <Typography component="p">
+                      Timing: {this.props.gameTimingDetails.gameTwoTime}
+                    </Typography>
+                  </div>
+                )}
               </CardContent>
               <CardActions>
-                <Button
-                  style={{
-                    color: "#FFFFFF",
-                    backgroundColor: "#027E69",
-                    textTransform: "none",
-                  }}
-                  onClick={() => {
-                    this.props.openPlayScreen();
-                  }}
-                >
-                  Play
-                </Button>
+                {this.props.gameTimingDetails.steps > 0 && (
+                  <Button
+                    style={{
+                      color: "#FFFFFF",
+                      backgroundColor: "#1cc88a",
+                      textTransform: "none",
+                    }}
+                    onClick={() => {
+                      this.props.openPlayScreen(
+                        this.props.gameTimingDetails.gameTwoTime
+                      );
+                    }}
+                  >
+                    Play
+                  </Button>
+                )}
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={4}></Grid>
-        </Grid>
-        <Grid container>
-          <Grid item xs={4}></Grid>
+
           <Grid item xs={4} style={{ padding: "10px" }}>
             <Card className="card">
               <CardContent>
@@ -103,31 +135,45 @@ class HomeTile extends React.Component {
                   variant="headline"
                   component="h2"
                   className="cardheading"
+                  style={{ color: "#36b9cc" }}
                 >
-                  Game3
+                  CAR RACER
                 </Typography>
                 <img src={hotel} style={{ width: "40px" }} />
-                <Typography component="p">
-                Based on your fitness tracking measures you will get some time to play!
-                </Typography>
+                {this.props.gameTimingDetails && (
+                  <div>
+                    <Typography component="p">
+                      Steps:{" "}
+                      {this.props.gameTimingDetails.steps
+                        ? this.props.gameTimingDetails.steps
+                        : 0}
+                    </Typography>
+                    <Typography component="p">
+                      Timing: {this.props.gameTimingDetails.gameThreeTime}
+                    </Typography>
+                  </div>
+                )}
               </CardContent>
               <CardActions>
-                <Button
-                  style={{
-                    color: "#FFFFFF",
-                    backgroundColor: "#027E69",
-                    textTransform: "none",
-                  }}
-                  onClick={() => {
-                    this.props.openPlayScreen();
-                  }}
-                >
-                  Play
-                </Button>
+                {this.props.gameTimingDetails.steps > 0 && (
+                  <Button
+                    style={{
+                      color: "#FFFFFF",
+                      backgroundColor: "#36b9cc",
+                      textTransform: "none",
+                    }}
+                    onClick={() => {
+                      this.props.openPlayScreen(
+                        this.props.gameTimingDetails.gameThreeTime
+                      );
+                    }}
+                  >
+                    Play
+                  </Button>
+                )}
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={4}></Grid>
         </Grid>
       </Fragment>
     );

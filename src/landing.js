@@ -11,28 +11,23 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       playScreenOpen: false,
+      timings: ''
     };
 
     this.openPlayScreen = this.openPlayScreen.bind(this);
-    this.navigateToHome = this.navigateToHome.bind(this)
   }
 
-  openPlayScreen() {
-    this.setState({ playScreenOpen: true });
-  }
-
-  navigateToHome(){
-      this.setState({playScreenOpen: false})
+  openPlayScreen(timings) {
+    this.setState({ playScreenOpen: true , timings: timings});
   }
 
   render() {
     return (
       <Fragment>
-        <Header />
         {this.state.playScreenOpen ? (
-          <GameScreen navigateToHome={this.navigateToHome}/>
+          <GameScreen navigateToHome={this.props.navigateToHome} timings={this.state.timings} selectedUserName={this.props.selectedUserName}/>
         ) : (
-          <HomeTile openPlayScreen={this.openPlayScreen} />
+          <HomeTile openPlayScreen={this.openPlayScreen} gameTimingDetails={this.props.gameTimingDetails}/>
         )}
       </Fragment>
     );

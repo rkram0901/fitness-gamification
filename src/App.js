@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Landing from './landing.js'
+import LandingTile from './landingTile.js'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Landing/>
+      <LandingTile/>
     </div>
   );
 }
