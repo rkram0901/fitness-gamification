@@ -1,20 +1,24 @@
 import { Button, DialogActions, DialogTitle, Dialog } from "@material-ui/core";
 import React from "react";
 import { Fragment } from "react";
+import { Grid, Typography } from "@material-ui/core";
 
 class Timer extends React.Component {
-  constructor() {
-    super();
-    this.state = { time: "00:1:05", endGame: false };
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: this.props.timings ? this.props.timings : "00:00:30",
+      endGame: false,
+    };
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
     this.navigateToHome = this.navigateToHome.bind(this);
   }
 
-  navigateToHome() {
-    this.setState({ endGame: false }, () => {
-      this.props.navigateToHome();
+  navigateToHome(selectedUserName) {
+    this.setState({ endGame: true }, () => {
+      this.props.navigateToHome(selectedUserName);
     });
   }
 
@@ -75,14 +79,25 @@ class Timer extends React.Component {
   render() {
     return (
       <Fragment>
-        <h2>{this.state.time}</h2>
+        <Grid container>
+          <Grid item xs={6} style={{ padding: "10px" }}>
+            <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
+              Hi {this.props.selectedUserName}!
+            </Typography>
+          </Grid>
+          <Grid item xs={6} style={{ padding: "10px" }}>
+            <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
+              Time Remaining [HH:MM:SS] : {this.state.time}
+            </Typography>
+          </Grid>
+        </Grid>
         {
           <Dialog open={this.state.endGame}>
             <DialogTitle>Time's Up!</DialogTitle>
             <DialogActions>
               <Button
                 onClick={() => {
-                  this.navigateToHome();
+                  this.navigateToHome(this.props.selectedUserName);
                 }}
               >
                 Ok

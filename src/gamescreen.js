@@ -15,7 +15,7 @@ class GameScreen extends React.Component {
   render() {
     return (
       <Fragment>
-        <Timer navigateToHome={this.props.navigateToHome} />
+        <Timer navigateToHome={this.props.navigateToHome} timings={this.props.timings} selectedUserName={this.props.selectedUserName} />
         <Grid>
           <Iframe
             url="https://main.dzr2qnbu9dvmr.amplifyapp.com/"
