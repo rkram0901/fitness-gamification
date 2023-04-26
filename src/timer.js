@@ -80,11 +80,12 @@ class Timer extends React.Component {
     return (
       <Fragment>
         <Grid container>
-          <Grid item xs={6} style={{ padding: "10px" }}>
+          <Grid item xs={5} style={{ paddingTop: "10px" }}>
             <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
               Hi {this.props.selectedUserName}!
             </Typography>
           </Grid>
+          <Grid item xs={1} />
           <Grid item xs={6} style={{ padding: "10px" }}>
             <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
               Time Remaining [HH:MM:SS] : {this.state.time}
@@ -95,13 +96,23 @@ class Timer extends React.Component {
           <Dialog open={this.state.endGame}>
             <DialogTitle>Time's Up!</DialogTitle>
             <DialogActions>
-              <Button
-                onClick={() => {
-                  this.navigateToHome(this.props.selectedUserName);
-                }}
-              >
-                Ok
-              </Button>
+              <Grid container>
+                <Grid item xs={3} />
+                <Grid item xs={2}>
+                  <Button
+                    style={{
+                      backgroundColor: "#2F78C4",
+                      textTransform: "none",
+                    }}
+                    onClick={() => {
+                      this.navigateToHome(this.props.selectedUserName);
+                    }}
+                  >
+                    Ok
+                  </Button>
+                </Grid>
+                <Grid item xs={7} />
+              </Grid>
             </DialogActions>
           </Dialog>
         }

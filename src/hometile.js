@@ -8,9 +8,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./App.css";
-import directions_walk from "./images/directions_walk.svg";
-import hotel from "./images/hotel.svg";
-import fitness_center from "./images/fitness_center.svg";
+import games from "./images/games.svg";
+import arrow_back_ios_new from "./images/arrow_back_ios_new.svg";
 
 class HomeTile extends React.Component {
   constructor(props) {
@@ -30,7 +29,7 @@ class HomeTile extends React.Component {
           </Grid>
           <Grid item xs={3}></Grid>
         </Grid>
-        <Grid container>
+        <Grid container style={{ padding: "10px" }}>
           <Grid item xs={4} style={{ padding: "10px" }}>
             <Card className="card">
               <CardContent>
@@ -43,7 +42,7 @@ class HomeTile extends React.Component {
                 >
                   HEXTRIS
                 </Typography>
-                <img src={directions_walk} style={{ width: "40px" }} />
+                <img src={games} style={{ width: "40px" }} />
                 {this.props.gameTimingDetails && (
                   <div>
                     <Typography component="p">
@@ -91,7 +90,7 @@ class HomeTile extends React.Component {
                 >
                   GOBLIN SLAYER
                 </Typography>
-                <img src={fitness_center} style={{ width: "40px" }} />
+                <img src={games} style={{ width: "40px" }} />
                 {this.props.gameTimingDetails && (
                   <div>
                     <Typography component="p">
@@ -139,7 +138,7 @@ class HomeTile extends React.Component {
                 >
                   CAR RACER
                 </Typography>
-                <img src={hotel} style={{ width: "40px" }} />
+                <img src={games} style={{ width: "40px" }} />
                 {this.props.gameTimingDetails && (
                   <div>
                     <Typography component="p">
@@ -174,6 +173,24 @@ class HomeTile extends React.Component {
               </CardActions>
             </Card>
           </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item xs={1} style={{ paddingTop: "80px", paddingLeft: "15px" }}>
+            <Button
+              style={{
+                backgroundColor: "#2F78C4",
+                textTransform: "none",
+                fontSize: "18px",
+              }}
+              onClick={() => {
+                this.props.handleBack();
+              }}
+            >
+              <img src={arrow_back_ios_new} />
+              Back
+            </Button>
+          </Grid>
+          <Grid item xs={11} />
         </Grid>
       </Fragment>
     );

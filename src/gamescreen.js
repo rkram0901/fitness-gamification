@@ -16,7 +16,9 @@ class GameScreen extends React.Component {
     return (
       <Fragment>
         <Timer navigateToHome={this.props.navigateToHome} timings={this.props.timings} selectedUserName={this.props.selectedUserName} />
-        <Grid>
+        <Grid container>
+          <Grid item xs={2}/>
+          <Grid item xs={8}>
           <Iframe
             url="https://main.dzr2qnbu9dvmr.amplifyapp.com/"
             width="800"
@@ -26,6 +28,8 @@ class GameScreen extends React.Component {
             display="block"
             position="relative"
           />
+          </Grid>
+          <Grid item xs={2}/>
         </Grid>
       </Fragment>
     );
