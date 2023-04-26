@@ -15,10 +15,15 @@ class Landing extends React.Component {
     };
 
     this.openPlayScreen = this.openPlayScreen.bind(this);
+    this.navigateToHome = this.navigateToHome.bind(this)
   }
 
   openPlayScreen(timings) {
     this.setState({ playScreenOpen: true , timings: timings});
+  }
+
+  navigateToHome(){
+      this.setState({playScreenOpen: false})
   }
 
   render() {
@@ -27,7 +32,7 @@ class Landing extends React.Component {
         {this.state.playScreenOpen ? (
           <GameScreen navigateToHome={this.props.navigateToHome} timings={this.state.timings} selectedUserName={this.props.selectedUserName}/>
         ) : (
-          <HomeTile openPlayScreen={this.openPlayScreen} gameTimingDetails={this.props.gameTimingDetails}/>
+          <HomeTile openPlayScreen={this.openPlayScreen} gameTimingDetails={this.props.gameTimingDetails} handleBack={this.props.handleBack}/>
         )}
       </Fragment>
     );
