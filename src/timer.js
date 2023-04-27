@@ -82,14 +82,14 @@ class Timer extends React.Component {
     return (
       <Fragment>
         <Grid container>
-          <Grid item xs={5} style={{ paddingTop: "10px" }}>
-            <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
+          <Grid item xs={5} >
+            <Typography style={{ color: "#5a5c69", fontSize: "28px" }}>
               Hi {this.props.selectedUserName}!
             </Typography>
           </Grid>
           <Grid item xs={1} />
-          <Grid item xs={6} style={{ padding: "10px" }}>
-            <Typography style={{ color: "#5a5c69", fontSize: "30px" }}>
+          <Grid item xs={6} >
+            <Typography style={{ color: "#5a5c69", fontSize: "28px" }}>
               Time Remaining [HH:MM:SS] : {this.state.time}
             </Typography>
           </Grid>
