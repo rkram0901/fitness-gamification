@@ -72,7 +72,9 @@ class Timer extends React.Component {
     // Check if we're at zero.
     if (seconds == 0) {
       clearInterval(this.timer);
-      this.setState({ endGame: true });
+      this.setState({ endGame: true }, ()=>{
+        setTimeout(()=>{this.navigateToHome(this.props.selectedUserName)}, 5000)
+      });
     }
   }
 
@@ -93,9 +95,9 @@ class Timer extends React.Component {
           </Grid>
         </Grid>
         {
-          <Dialog open={this.state.endGame}>
+          <Dialog maxWidth="md" open={this.state.endGame}>
             <DialogTitle>Time's Up!</DialogTitle>
-            <DialogActions>
+            {/* <DialogActions>
               <Grid container>
                 <Grid item xs={3} />
                 <Grid item xs={2}>
@@ -113,7 +115,7 @@ class Timer extends React.Component {
                 </Grid>
                 <Grid item xs={7} />
               </Grid>
-            </DialogActions>
+            </DialogActions> */}
           </Dialog>
         }
       </Fragment>

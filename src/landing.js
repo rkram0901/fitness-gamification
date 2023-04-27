@@ -1,8 +1,9 @@
 import React from "react";
 import _ from "lodash";
 import { Fragment } from "react";
+import Header from "./header.js";
 import HomeTile from "./hometile.js";
-import GameScreen from "./gamescreen.js";
+import GameScreen from "./gamescreen.js"
 import "./App.css";
 
 class Landing extends React.Component {
@@ -10,39 +11,28 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       playScreenOpen: false,
-      timings: "",
-      gameUrl: "",
+      timings: ''
     };
 
     this.openPlayScreen = this.openPlayScreen.bind(this);
-    this.navigateToGameHome = this.navigateToGameHome.bind(this);
+    this.navigateToHome = this.navigateToHome.bind(this)
   }
 
-  openPlayScreen(timings, gameUrl) {
-    this.setState({ playScreenOpen: true, timings: timings, gameUrl: gameUrl });
+  openPlayScreen(timings) {
+    this.setState({ playScreenOpen: true , timings: timings});
   }
 
-  navigateToGameHome() {
-    this.setState({ playScreenOpen: false });
+  navigateToHome(){
+      this.setState({playScreenOpen: false})
   }
 
   render() {
     return (
       <Fragment>
         {this.state.playScreenOpen ? (
-          <GameScreen
-            navigateToHome={this.props.navigateToHome}
-            timings={this.state.timings}
-            selectedUserName={this.props.selectedUserName}
-            navigateToGameHome={this.navigateToGameHome}
-            gameUrl={this.state.gameUrl}
-          />
+          <GameScreen navigateToHome={this.props.navigateToHome} timings={this.state.timings} selectedUserName={this.props.selectedUserName}/>
         ) : (
-          <HomeTile
-            openPlayScreen={this.openPlayScreen}
-            gameTimingDetails={this.props.gameTimingDetails}
-            handleBack={this.props.handleBack}
-          />
+          <HomeTile openPlayScreen={this.openPlayScreen} gameTimingDetails={this.props.gameTimingDetails} handleBack={this.props.handleBack}/>
         )}
       </Fragment>
     );
