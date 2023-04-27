@@ -166,7 +166,7 @@ class HomeTile extends React.Component {
                     onClick={() => {
                       this.props.openPlayScreen(
                         this.props.gameTimingDetails.gameThreeTime,
-                        ""
+                        "https://carracer.s3.ap-south-1.amazonaws.com/index.html"
                       );
                     }}
                   >
