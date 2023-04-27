@@ -4,7 +4,8 @@ import { Fragment } from "react";
 import Iframe from "react-iframe";
 import Timer from "./timer.js";
 import "./App.css";
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
+import arrow_back_ios_new from "./images/arrow_back_ios_new.svg";
 
 class GameScreen extends React.Component {
   constructor(props) {
@@ -20,16 +21,32 @@ class GameScreen extends React.Component {
           <Grid item xs={2}/>
           <Grid item xs={8}>
           <Iframe
-            url="https://main.dzr2qnbu9dvmr.amplifyapp.com/"
+            url={this.props.gameUrl}
             width="800"
             height="450"
-            id={Math.random()}
+            id=""
             className=""
             display="block"
             position="relative"
           />
           </Grid>
           <Grid item xs={2}/>
+          <Grid item xs={1} style={{paddingLeft: "15px" }}>
+            <Button
+              style={{
+                backgroundColor: "#2F78C4",
+                textTransform: "none",
+                fontSize: "18px",
+              }}
+              onClick={() => {
+                this.props.navigateToGameHome();
+              }}
+            >
+              <img src={arrow_back_ios_new} />
+              Back
+            </Button>
+          </Grid>
+          <Grid item xs={11} />
         </Grid>
       </Fragment>
     );

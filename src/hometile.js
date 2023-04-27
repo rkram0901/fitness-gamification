@@ -67,7 +67,8 @@ class HomeTile extends React.Component {
                     }}
                     onClick={() => {
                       this.props.openPlayScreen(
-                        this.props.gameTimingDetails.gameOneTime
+                        this.props.gameTimingDetails.gameOneTime,
+                        "https://main.dzr2qnbu9dvmr.amplifyapp.com/"
                       );
                     }}
                   >
@@ -115,7 +116,8 @@ class HomeTile extends React.Component {
                     }}
                     onClick={() => {
                       this.props.openPlayScreen(
-                        this.props.gameTimingDetails.gameTwoTime
+                        this.props.gameTimingDetails.gameTwoTime,
+                        "https://goblinslayer.s3.ap-south-1.amazonaws.com/index.html"
                       );
                     }}
                   >
