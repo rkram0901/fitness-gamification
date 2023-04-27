@@ -16,7 +16,7 @@ class Architecture extends React.Component {
     return (
       <Fragment>
         <Grid container style={{ display: "block" }}>
-          <img src={architectImage} />
+          <img src={architectImage} style={{width: '57%'}}/>
         </Grid>
         <Grid container>
           <Grid item xs={1} style={{ paddingTop: "80px", paddingLeft: "15px" }}>
@@ -24,7 +24,6 @@ class Architecture extends React.Component {
               style={{
                 backgroundColor: "#2F78C4",
                 textTransform: "none",
-                fontSize: "18px",
               }}
               onClick={() => {
                 this.props.handleBack();

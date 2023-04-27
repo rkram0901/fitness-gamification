@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <Grid container className="heading">
-        <Grid item xs={12} style={{ padding: "10px" }}>
+        <Grid item xs={12}>
           {"Gamification of fitness"}{" "}
         </Grid>
       </Grid>

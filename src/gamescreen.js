@@ -36,7 +36,6 @@ class GameScreen extends React.Component {
               style={{
                 backgroundColor: "#2F78C4",
                 textTransform: "none",
-                fontSize: "18px",
               }}
               onClick={() => {
                 this.props.navigateToGameHome();

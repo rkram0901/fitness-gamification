@@ -247,12 +247,11 @@ class LandingTile extends React.Component {
             </Grid>
             <Grid container>
               <Grid item xs={10} />
-              <Grid item xs={1} style={{ paddingTop: "30px" }}>
+              <Grid item xs={1} >
                 <Button
                   style={{
                     backgroundColor: "#2F78C4",
                     textTransform: "none",
-                    fontSize: "18px",
                   }}
                   onClick={() => {
                     this.handleShowArch();
