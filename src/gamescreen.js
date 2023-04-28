@@ -38,7 +38,7 @@ class GameScreen extends React.Component {
                 textTransform: "none",
               }}
               onClick={() => {
-                this.props.navigateToGameHome();
+                this.props.navigateToGameHome(this.props.selectedUserName);
               }}
             >
               <img src={arrow_back_ios_new} />
