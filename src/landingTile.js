@@ -246,6 +246,48 @@ class LandingTile extends React.Component {
               <Grid item xs={3}></Grid>
             </Grid>
             <Grid container>
+              <Grid item xs={3}></Grid>
+              <Grid item xs={6} className="cardstyle border-left-info">
+                <div
+                  onClick={() => {
+                    this.handleNameClick(
+                      this.state.stepDetails[3],
+                      "Kiran, Ravi S"
+                    );
+                  }}
+                >
+                  <Grid container spacing={{ xs: 2, md: 3 }}>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i className="fa fa-duotone fa-user  fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography className="cardnameheading colorinfo">
+                      Kiran, Ravi S
+                      </Typography>
+                      <div style={{paddingTop: '10px'}}>
+                        {this.state.stepDetails &&
+                        this.state.stepDetails[3] &&
+                        this.state.stepDetails[3].stepsCount
+                          ? this.state.stepDetails[3].stepsCount
+                          : 0}
+                      </div>
+                      <Typography >
+                        Steps
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={1} sm={4} md={4}>
+                      <div>
+                        <i class="fa fa-solid fa-flash fa-4x text-gray-300"></i>
+                      </div>
+                    </Grid>
+                  </Grid>
+                </div>
+              </Grid>
+              <Grid item xs={3}></Grid>
+            </Grid>
+            <Grid container>
               <Grid item xs={10} />
               <Grid item xs={1} >
                 <Button
