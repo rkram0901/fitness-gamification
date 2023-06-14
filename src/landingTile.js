@@ -36,7 +36,7 @@ class LandingTile extends React.Component {
   }
 
   handleBack() {
-    this.setState({ isGameLanding: false, isShowArch: false});
+    this.setState({ isGameLanding: false, isShowArch: false });
   }
 
   async navigateToHome(userName) {
@@ -126,7 +126,7 @@ class LandingTile extends React.Component {
                   onClick={() => {
                     this.handleNameClick(
                       this.state.stepDetails[0],
-                      "Filkins, Kathleen R"
+                      "Kiran, Ravi S"
                     );
                   }}
                 >
@@ -138,18 +138,16 @@ class LandingTile extends React.Component {
                     </Grid>
                     <Grid item xs={4}>
                       <Typography className="cardnameheading colorblue">
-                        Filkins, Kathleen R
+                        Kiran, Ravi S
                       </Typography>
-                      <div style={{paddingTop: '10px'}}>
+                      <div style={{ paddingTop: "10px" }}>
                         {this.state.stepDetails &&
                         this.state.stepDetails[0] &&
                         this.state.stepDetails[0].stepsCount
                           ? this.state.stepDetails[0].stepsCount
                           : 0}
                       </div>
-                      <Typography >
-                        Steps
-                      </Typography>
+                      <Typography>Steps</Typography>
                     </Grid>
                     <Grid item xs={1} sm={4} md={4}>
                       <div>
@@ -182,16 +180,14 @@ class LandingTile extends React.Component {
                       <Typography className="cardnameheading colorsuccess">
                         Briggs, Leah
                       </Typography>
-                      <div style={{paddingTop: '10px'}}>
+                      <div style={{ paddingTop: "10px" }}>
                         {this.state.stepDetails &&
                         this.state.stepDetails[1] &&
                         this.state.stepDetails[1].stepsCount
                           ? this.state.stepDetails[1].stepsCount
                           : 0}
                       </div>
-                      <Typography >
-                        Steps
-                      </Typography>
+                      <Typography>Steps</Typography>
                     </Grid>
                     <Grid item xs={1} sm={4} md={4}>
                       <div>
@@ -224,16 +220,14 @@ class LandingTile extends React.Component {
                       <Typography className="cardnameheading colorinfo">
                         Powell, Ed
                       </Typography>
-                      <div style={{paddingTop: '10px'}}>
+                      <div style={{ paddingTop: "10px" }}>
                         {this.state.stepDetails &&
                         this.state.stepDetails[2] &&
                         this.state.stepDetails[2].stepsCount
                           ? this.state.stepDetails[2].stepsCount
                           : 0}
                       </div>
-                      <Typography >
-                        Steps
-                      </Typography>
+                      <Typography>Steps</Typography>
                     </Grid>
                     <Grid item xs={1} sm={4} md={4}>
                       <div>
@@ -247,12 +241,12 @@ class LandingTile extends React.Component {
             </Grid>
             <Grid container>
               <Grid item xs={3}></Grid>
-              <Grid item xs={6} className="cardstyle border-left-info">
+              <Grid item xs={6} className="cardstyle border-left-primary-blue">
                 <div
                   onClick={() => {
                     this.handleNameClick(
                       this.state.stepDetails[3],
-                      "Kiran, Ravi S"
+                      "Filkins, Kathleen R"
                     );
                   }}
                 >
@@ -263,19 +257,17 @@ class LandingTile extends React.Component {
                       </div>
                     </Grid>
                     <Grid item xs={4}>
-                      <Typography className="cardnameheading colorinfo">
-                      Kiran, Ravi S
+                      <Typography className="cardnameheading colorblue">
+                        Filkins, Kathleen R
                       </Typography>
-                      <div style={{paddingTop: '10px'}}>
+                      <div style={{ paddingTop: "10px" }}>
                         {this.state.stepDetails &&
                         this.state.stepDetails[3] &&
                         this.state.stepDetails[3].stepsCount
                           ? this.state.stepDetails[3].stepsCount
                           : 0}
                       </div>
-                      <Typography >
-                        Steps
-                      </Typography>
+                      <Typography>Steps</Typography>
                     </Grid>
                     <Grid item xs={1} sm={4} md={4}>
                       <div>
@@ -289,7 +281,7 @@ class LandingTile extends React.Component {
             </Grid>
             <Grid container>
               <Grid item xs={10} />
-              <Grid item xs={1} >
+              <Grid item xs={1}>
                 <Button
                   style={{
                     backgroundColor: "#2F78C4",
