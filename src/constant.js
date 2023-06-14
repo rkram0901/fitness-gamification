@@ -1,5 +1,5 @@
 const router = {
-    baseUrl: 'https://syncwatch.azurewebsites.net'
+    baseUrl: 'https://syncwatchnew.azurewebsites.net'
 }
 
 const user = [
