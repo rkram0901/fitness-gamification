@@ -119,7 +119,7 @@ class LandingTile extends React.Component {
           <Architecture handleBack={this.handleBack} />
         ) : (
           <Grid container>
-            <Grid container>
+            <Grid container style={{paddingTop: '20px'}}>
               <Grid item xs={3}></Grid>
               <Grid item xs={6} className="cardstyle border-left-primary-blue">
                 <div
@@ -159,7 +159,7 @@ class LandingTile extends React.Component {
               </Grid>
               <Grid item xs={3}></Grid>
             </Grid>
-            <Grid container>
+           {/* <Grid container>
               <Grid item xs={3}></Grid>
               <Grid item xs={6} className="cardstyle border-left-success-green">
                 <div
@@ -278,8 +278,8 @@ class LandingTile extends React.Component {
                 </div>
               </Grid>
               <Grid item xs={3}></Grid>
-            </Grid>
-            <Grid container>
+            </Grid>*/}
+            <Grid container style={{paddingTop: '160px'}}>
               <Grid item xs={10} />
               <Grid item xs={1}>
                 <Button
