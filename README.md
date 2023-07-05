@@ -1,4 +1,4 @@
-# Fitness Gamification UI
+# Fitness Gamification APP
 
 ## Getting Started with Create React App
 
