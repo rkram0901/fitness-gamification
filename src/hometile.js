@@ -68,7 +68,7 @@ class HomeTile extends React.Component {
                     onClick={() => {
                       this.props.openPlayScreen(
                         this.props.gameTimingDetails.gameOneTime,
-                        "https://main.dzr2qnbu9dvmr.amplifyapp.com/"
+                        "https://main.d2o63ton617onj.amplifyapp.com/"
                       );
                     }}
                   >
@@ -117,7 +117,7 @@ class HomeTile extends React.Component {
                     onClick={() => {
                       this.props.openPlayScreen(
                         this.props.gameTimingDetails.gameTwoTime,
-                        "https://main.d31e8zu34530mn.amplifyapp.com/"
+                        "https://main.dsu1lmdc5rd6h.amplifyapp.com/"
                       );
                     }}
                   >
@@ -166,7 +166,7 @@ class HomeTile extends React.Component {
                     onClick={() => {
                       this.props.openPlayScreen(
                         this.props.gameTimingDetails.gameThreeTime,
-                        "https://main.d1t34beo4t1li3.amplifyapp.com/"
+                        "https://main.d17fxf81jdd1sh.amplifyapp.com/"
                       );
                     }}
                   >
